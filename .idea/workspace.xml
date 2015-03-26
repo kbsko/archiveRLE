@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7aa9bf91-10fd-43ea-b33b-d942b1ffc391" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RLE.java" afterPath="$PROJECT_DIR$/src/RLE.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="archiveRLE.iws" />
@@ -71,9 +70,10 @@
       <file leaf-file-name="RLE.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RLE.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="0" selection-start="3439" selection-end="3439" vertical-scroll-proportion="0.74242425" vertical-offset="1548" max-vertical-offset="2142">
+            <state line="169" column="0" selection-start="5051" selection-end="5051" vertical-scroll-proportion="0.74242425" vertical-offset="2432" max-vertical-offset="3026">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2828#2836#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,8 +130,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -166,6 +164,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -451,12 +451,18 @@
       <created>1427330454519</created>
       <updated>1427330454519</updated>
       <workItem from="1427330455792" duration="11080000" />
-      <workItem from="1427352594083" duration="5861000" />
+      <workItem from="1427352594083" duration="6431000" />
+      <workItem from="1427360247427" duration="4018000" />
     </task>
+    <task id="LOCAL-00001" summary="Add FileInputStream Add Skobki">
+      <created>1427358491682</created>
+      <updated>1427358491682</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16941000" />
+    <option name="totallyTimeSpent" value="21529000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="41" width="1932" height="1056" extended-state="0" />
@@ -482,7 +488,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -502,6 +508,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Add FileInputStream Add Skobki" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add FileInputStream Add Skobki" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -513,18 +521,30 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/RLE.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="34" selection-start="2292" selection-end="2303" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
+        <state line="117" column="0" selection-start="3439" selection-end="3439" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="2142">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2828#2836#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RLE.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="0" selection-start="3439" selection-end="3439" vertical-scroll-proportion="0.74242425" vertical-offset="1548" max-vertical-offset="2142">
+        <state line="84" column="34" selection-start="2292" selection-end="2303" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2828#2836#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RLE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="169" column="0" selection-start="5051" selection-end="5051" vertical-scroll-proportion="0.74242425" vertical-offset="2432" max-vertical-offset="3026">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2828#2836#0" expanded="true" />
           </folding>
         </state>
       </provider>

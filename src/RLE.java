@@ -1,6 +1,5 @@
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
 
 /**
  * Created by Kubish on 26.03.15.
@@ -99,8 +98,12 @@ public class RLE {
 
 
     public static void main(String argc[]) throws IOException {
+        System.out.println("///////////////Arhivator/////////////////////////////////////////////");
+        ArrayList<String> buf = new ArrayList<String>();
+        //Чтение из файла
 
-        byte[] buffer = new byte[128];
+
+        byte[] buffer = new byte[256];
         BufferedInputStream bufferedInput = new BufferedInputStream(new FileInputStream("G:\\filename.txt"));
         int bytesRead = 0;
         while ((bytesRead = bufferedInput.read(buffer)) != -1) {
@@ -108,13 +111,62 @@ public class RLE {
             System.out.println("\nSource string:");
             System.out.println(code);
             String encode = encodeRLE(code);
+            buf.add(encode);
             System.out.println("\nEncode string:");
             System.out.println(encode);
-            String decode = decodeRLE(encode);
-            System.out.println("\nDecode string:");
-            System.out.print(decode);
+
         }
         bufferedInput.close();
+
+        //Архивированный файл
+        try {
+            BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream("G:\\out.txt"));
+            for (int i = 0; i < buf.size(); i++) {
+                stream.write(buf.get(i).getBytes());
+                System.out.println("\nString success write file:");
+            }
+            stream.close();
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+
+        //Чтение из архива
+
+        buf.clear();
+        System.out.println("///////////////Razarhivator/////////////////////////////////////////////");
+        bufferedInput = new BufferedInputStream(new FileInputStream("G:\\out.txt"));
+        bytesRead = 0;
+        while ((bytesRead = bufferedInput.read(buffer)) != -1) {
+            String code = new String(buffer, 0, bytesRead);
+            System.out.println("\nSource string:");
+            System.out.println(code);
+            String decode = decodeRLE(code);
+            buf.add(decode);
+            System.out.println("\nDecode string:");
+            System.out.println(decode);
+
+        }
+        bufferedInput.close();
+
+
+        // Разархивированный файл
+
+
+        try {
+            BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream("G:\\out2.txt"));
+            for (int i = 0; i < buf.size(); i++) {
+                stream.write(buf.get(i).getBytes());
+
+                System.out.println("\nString success write file:");
+            }
+
+            stream.close();
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
     }
 }
