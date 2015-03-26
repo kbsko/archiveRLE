@@ -97,14 +97,14 @@ public class RLE {
     }
 
 
-    public static void main(String argc[]) throws IOException {
-        System.out.println("///////////////Arhivator/////////////////////////////////////////////");
+    static void zip(String inname, String outname) throws IOException {
+
         ArrayList<String> buf = new ArrayList<String>();
         //Чтение из файла
 
 
         byte[] buffer = new byte[256];
-        BufferedInputStream bufferedInput = new BufferedInputStream(new FileInputStream("G:\\filename.txt"));
+        BufferedInputStream bufferedInput = new BufferedInputStream(new FileInputStream(String.valueOf(inname)));
         int bytesRead = 0;
         while ((bytesRead = bufferedInput.read(buffer)) != -1) {
             String code = new String(buffer, 0, bytesRead);
@@ -120,7 +120,7 @@ public class RLE {
 
         //Архивированный файл
         try {
-            BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream("G:\\out.txt"));
+            BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(String.valueOf(outname)));
             for (int i = 0; i < buf.size(); i++) {
                 stream.write(buf.get(i).getBytes());
                 System.out.println("\nString success write file:");
@@ -131,13 +131,17 @@ public class RLE {
             ex.printStackTrace();
         }
 
+    }
 
-        //Чтение из архива
 
-        buf.clear();
+
+    static void unzip(String inname, String outname) throws IOException {
+
+        ArrayList<String> buf = new ArrayList<String>();
         System.out.println("///////////////Razarhivator/////////////////////////////////////////////");
-        bufferedInput = new BufferedInputStream(new FileInputStream("G:\\out.txt"));
-        bytesRead = 0;
+        BufferedInputStream bufferedInput = new BufferedInputStream(new FileInputStream(inname));
+        int bytesRead = 0;
+        byte[] buffer = new byte[256];
         while ((bytesRead = bufferedInput.read(buffer)) != -1) {
             String code = new String(buffer, 0, bytesRead);
             System.out.println("\nSource string:");
@@ -155,7 +159,7 @@ public class RLE {
 
 
         try {
-            BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream("G:\\out2.txt"));
+            BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(outname));
             for (int i = 0; i < buf.size(); i++) {
                 stream.write(buf.get(i).getBytes());
 
@@ -167,6 +171,22 @@ public class RLE {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+
+
+    }
+
+    public static void main(String argc[]) throws IOException {
+        System.out.println("///////////////Arhivator/////////////////////////////////////////////");
+        String in="G:\\filename.txt";
+        String out="G:\\out.txt";
+        zip(in,out);
+
+        in="G:\\out.txt";
+        out="G:\\out2.txt";
+        unzip(in, out);
+
+
+
 
     }
 }
